@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <button (click)="changeAge('')" [ngClass]="{'button_active': age == ''}">All</button>
+            <button (click)="changeAge('Dark')" [ngClass]="{'button_active': age == 'Dark'}">Dark</button>
+            <button (click)="changeAge('Feudal')" [ngClass]="{'button_active': age == 'Feudal'}">Feudal</button>
+            <button (click)="changeAge('Castle')" [ngClass]="{'button_active': age == 'Castle'}">Castle</button>
+            <button (click)="changeAge('Imperial')" [ngClass]="{'button_active': age == 'Imperial'}">Imperial</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 margin-b-10">
+            <input type="checkbox" id="food_checkbox" [checked]="foodCheck" (change)="changeStatus($event.target.checked, 'Food')"><label for="">Food</label>
+            <input type="range" min="0" max="200" value="{{minfoodValue}}" class="slider slider_food" [disabled]="foodCheck ? false : true" (input)="ChangeMinCost($event.target.value, 'Food')">
+            <input type="range" min="0" max="200" value="{{maxfoodValue}}" class="slider slider_food" [disabled]="foodCheck ? false : true" (input)="ChangeMaxCost($event.target.value, 'Food')">
+            <span *ngIf="foodCheck">Food: {{minfoodValue}} - {{maxfoodValue}}</span>
+        </div>
+        <div class="col-12 margin-b-10">
+            <input type="checkbox" [checked]="woodCheck" (change)="changeStatus($event.target.checked, 'Wood')"><label for="">Wood</label> 
+            <input type="range" min="0" max="200" value="{{minwoodValue}}" class="slider slider_wood" [disabled]="woodCheck ? false : true" (input)="ChangeMinCost($event.target.value, 'Wood')">
+            <input type="range" min="0" max="200" value="{{maxwoodValue}}" class="slider slider_wood" [disabled]="woodCheck ? false : true" (input)="ChangeMaxCost($event.target.value, 'Wood')">
+            <span *ngIf="woodCheck">Wood: {{minwoodValue}} - {{maxwoodValue}}</span>
+        </div>
+        <div class="col-12 margin-b-10">
+            <input type="checkbox" [checked]="goldCheck" (change)="changeStatus($event.target.checked, 'Gold')"><label for="">Gold</label> 
+            <input type="range" min="" max="200" value="{{mingoldValue}}" class="slider slider_gold" [disabled]="goldCheck ? false : true" (input)="ChangeMinCost($event.target.value, 'Gold')">
+            <input type="range" min="0" max="200" value="{{maxgoldValue}}" class="slider slider_gold" [disabled]="goldCheck ? false : true" (input)="ChangeMaxCost($event.target.value, 'Gold')">
+            <span *ngIf="goldCheck">Gold: {{mingoldValue}} - {{maxgoldValue}}</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div *ngIf="units">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Costs</th>
+                            <th>Detail</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let unit of UnitFilter()">
+                            <td>{{ unit.id }}</td>
+                            <td>{{ unit.name }}</td>
+                            <td>{{ unit.age }}</td>
+                            <td>Food: {{ unit.cost?.Food }}, Wood: {{ unit.cost?.Wood }}, Gold: {{ unit.cost?.Gold }}</td>
+                            <td>
+                                <button class="btn btn-primary" (click)="UnitDetail(unit)">Detail</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>

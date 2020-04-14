@@ -1,0 +1,107 @@
+<div class="container">
+    <div class="col-12" *ngIf="unit">
+        <div class="row">
+            <div class="col-3 offset-xl-3">
+                <strong>Id</strong>
+            </div>
+            <div class="col-4">
+                {{tempUnit?.id}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 offset-xl-3">
+                <strong>Name</strong>
+            </div>
+            <div class="col-4">
+                {{tempUnit?.name}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 offset-xl-3">
+                <strong>Description</strong>
+            </div>
+            <div class="col-4">
+                {{tempUnit?.description}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 offset-xl-3">
+                <strong>Min. Required Age</strong>
+            </div>
+            <div class="col-4">
+                {{tempUnit?.age}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 offset-xl-3">
+                <strong>Wood Cost</strong>
+            </div>
+            <div class="col-4">
+                {{tempUnit?.cost.Wood}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 offset-xl-3">
+                <strong>Food Cost</strong>
+            </div>
+            <div class="col-4">
+                {{tempUnit?.cost.Food}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 offset-xl-3">
+                <strong>Gold Cost</strong>
+            </div>
+            <div class="col-4">
+                {{tempUnit?.cost.Gold}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 offset-xl-3">
+                <strong>Build time</strong>
+            </div>
+            <div class="col-4">
+                {{tempUnit?.rebuild_time}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 offset-xl-3">
+                <strong>Reload Time</strong>
+            </div>
+            <div class="col-4">
+                {{tempUnit?.reload_time}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 offset-xl-3">
+                <strong>Hit Points</strong>
+            </div>
+            <div class="col-4">
+                {{tempUnit?.hit_points}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 offset-xl-3">
+                <strong>Attack</strong>
+            </div>
+            <div class="col-4">
+                {{tempUnit?.attack}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 offset-xl-3">
+                <strong>Accuracy</strong>
+            </div>
+            <div class="col-4">
+                {{tempUnit?.accuracy}}
+            </div>
+        </div>
+    </div>
+    <div class="col-12" *ngIf="!unit">
+        <div class="row">
+            <h3>
+                No Unit Found
+            </h3>
+        </div>
+    </div>
+</div>

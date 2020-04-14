@@ -1,0 +1,44 @@
+header {
+    position: absolute;
+    top: 0;
+    height: 57px;
+    background-color: #e2e2e2;
+    width: 100%;
+    left: 0;
+  }
+    
+  li {
+    list-style: none;
+    height: 100%;
+  }
+  
+  a {
+    text-decoration: none;
+    list-style: none;
+    color:#2d2d2d;
+  }
+  
+  header .right_menu {
+    width: 20%;
+    float: right;
+    display: inline-block;
+    padding: 14px 0;
+  }
+  
+  .right_menu ul{
+      display: inline-flex;
+      justify-content: space-evenly;
+      width: 80%;
+  }
+  
+  button.btnLogin {
+      cursor: pointer;
+      background-color: transparent;
+      border: 1px solid #2d2d2d;
+      color: #2d2d2d;
+      border-radius: 4px;
+      font-weight: 500;
+      font-size: 14px;
+      padding: 3px 20px;  
+  }
+  

@@ -1,0 +1,78 @@
+@import "~bootstrap/scss/bootstrap";
+
+$padding-top: 6%;
+$margin-right:15px;
+$home-p-t: 7%;
+
+.container {
+  padding-top: $padding-top;
+}
+
+.margin-b-10{
+  margin-bottom: 10px;
+}
+
+.home {
+    padding-top: $home-p-t;
+  }
+
+  .slider {
+    -webkit-appearance: none;
+    height: 4px;
+    border-radius: 5px;  
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    position: relative;
+    top: -6px;
+    left: 20px;
+    margin-right: 30px;
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%; 
+    background: #000;
+    cursor: pointer;
+  }
+
+  button{
+    margin-right: $margin-right;
+    background-color: transparentize($color: #ffffff, $amount: 0);
+    border: 1px solid #e2e2e2;
+    padding: 4px 20px;
+    outline: none !important;
+    margin-bottom: 20px;
+  }
+
+  .button_active{
+    background-color: #757575;
+    color: #fff;
+  }
+
+  input[type=checkbox] {
+      margin-right: 10px;
+      height: 16px;
+      width: 16px;
+      border: 1px solid #e2e2e2;
+      outline: none !important;
+  }
+
+  label{
+    margin-bottom: 0;
+    font-size: 22px;
+    font-weight: 600;
+    min-width: 60px;
+  }
+
+  span{
+    position: relative;
+    top: -2px;
+    font-size: 20px;
+    left: 10px;
+  }
+
+
